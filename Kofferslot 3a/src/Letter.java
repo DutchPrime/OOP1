@@ -11,6 +11,10 @@ public class Letter {
         this.letter = 'A';
     }
 
+    public Letter(char letter) {
+        this.letter = letter;
+    }
+
     public char getLetter(){
         return this.letter;
     }
