@@ -1,6 +1,8 @@
 /**
  *
  *
+ *
+ * @author Koen Lippe 500794493
  */
 
 public class Waterfles {
