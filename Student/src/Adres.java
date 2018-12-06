@@ -4,6 +4,8 @@
  * @author  Koen Lippe 500794493
  */
 
+
+
 public class Adres {
     //Variables
     private String straat;
@@ -12,6 +14,14 @@ public class Adres {
     private String plaats;
 
     //Constructor
+
+    /**
+     * This constructor creates an Adres instance
+     * @param straat The street name of the address
+     * @param huisnr The number of the address
+     * @param postcode The postal code of the address
+     * @param plaats In which city the address is located
+     */
     public Adres(
             String straat,
             int huisnr,
@@ -25,16 +35,66 @@ public class Adres {
     }
 
     //Methods
+    /**
+     * This method returns the full adress in a formatted String
+     *
+     * @return formatted String (full address)
+     */
     public String toString(){
-        return null;
+        return straat + " " + huisnr + ", " + postcode + " " + plaats;
     }
 
-    public static boolean checkPostcode (String postcode){
-        return false;
+    /**
+     * This method checks if the entered postal code is in the correct format
+     * The correct format is:
+     *      1st number between 1 and 9
+     *      2nd til 4th number between 0 and 9
+     *      5th and 6th must be a letter
+     *
+     * @param postcode The postal code that needs to be checked
+     * @return true or false statement that indicates if the postocal code is in the right format.
+     */
+    public static boolean checkPostcode (String postcode) {
+        //check of postcode een geldige NL postcode is.
+        //Postcode is geldig wanneer de 1e karakter tussen 1 en 9 zit
+        //Postcode is geldig wanneer de 2e t/m 4e karakter tussen de 0 - 9
+
+
+        //1e tussen de 1 en 9
+        //2et t/m 4e tussen 0 en 9
+        //5e en 6e tussen A en Z
+        //Tip: test op lengte van postcode.
+
+        if(postcode.length() != 6){
+            return false;
+        }
+
+        for (int i = 0; i < 6; i++) {
+            int c = postcode.indexOf(i);
+            switch (i){
+                case 0:
+                    //First number has to be between 1 and 9
+                    if(c < 1) {
+                        return false;
+                    }
+                    break;
+                case 1:
+                case 2:
+                case 3:
+                    //Number 2,3 and 4 must be between 0 and 9
+                    if(!Character.isLetter(c)){
+                        return false;
+                    }
+                    break;
+
+                case 4:
+                case 5:
+                    if(Character.isAlphabetic(c)){
+                        return false;
+                    }
+            }
+        }
+
+    return true;
     }
-
-
-
-
-
 }
