@@ -55,16 +55,6 @@ public class Adres {
      * @return true or false statement that indicates if the postocal code is in the right format.
      */
     public static boolean checkPostcode (String postcode) {
-        //check of postcode een geldige NL postcode is.
-        //Postcode is geldig wanneer de 1e karakter tussen 1 en 9 zit
-        //Postcode is geldig wanneer de 2e t/m 4e karakter tussen de 0 - 9
-
-
-        //1e tussen de 1 en 9
-        //2et t/m 4e tussen 0 en 9
-        //5e en 6e tussen A en Z
-        //Tip: test op lengte van postcode.
-
         if(postcode.length() != 6){
             return false;
         }

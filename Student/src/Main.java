@@ -63,11 +63,12 @@ public class Main {
             String postcode = adresArray[2];
 
 
-            //Check if postcode is valid
-            System.out.println(Adres.checkPostcode(postcode));
+            //Check if postcode is valid. (Assignment does not ask to print it or ask for repeated input)
+            boolean valid = Adres.checkPostcode(postcode);
 
             //Still turning user input into variables to be added in an Adres object
             String plaats = adresArray[3];
+
 
             //Creating Adres and student object
             Adres adres = new Adres(straat, huisnr, postcode, plaats);
