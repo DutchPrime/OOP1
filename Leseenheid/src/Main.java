@@ -2,25 +2,27 @@ import modules.LesEenheid;
 import modules.Project;
 import modules.Vak;
 import modules.ProfessionalSkills;
+
 public class Main {
     /**
-     *
+     * This program is made to practice with Object Oriented programming.
+     * This program is not functional, it only displays information stored in the objects.
      *
      * @author Koen Lippe 500794493
      */
     public static void main(String[] args) {
         //Assignment A: test LesEenheid
-        LesEenheid lesEenheid = new LesEenheid("Algemeen", 3 , 2);
+        LesEenheid lesEenheid = new LesEenheid("Algemeen", 3, 2);
         System.out.println(lesEenheid);
         System.out.println();
 
         //Assignment A: test Vak
-        Vak vak = new Vak("OOP1", 3 , 1, 7.8);
+        Vak vak = new Vak("OOP1", 3, 1, 7.8);
         System.out.println(vak);
         System.out.println();
 
         //Assignment A: test ProfessionalSkills
-        ProfessionalSkills skill = new ProfessionalSkills("Personal Skills", 2 , 1, false);
+        ProfessionalSkills skill = new ProfessionalSkills("Personal Skills", 2, 1, false);
         System.out.println(skill);
         skill.setGehaald(true);
         System.out.println(skill);
@@ -28,7 +30,7 @@ public class Main {
 
         //Assignment A: test Project
         Project project = new Project(
-                "Fasten Your Seatbelts", 12 , 1, 7.4, 6.8, 8.0);
+                "Fasten Your Seatbelts", 12, 1, 7.4, 6.8, 8.0);
         System.out.println(project);
         System.out.println();
 
@@ -43,7 +45,7 @@ public class Main {
         System.out.println(nogEenVak.toString() + ", afgerond: " +
                 nogEenVak.isAfgerond());
 
-        ProfessionalSkills nogEenSkill = new ProfessionalSkills("ICT Ethics", 2, 2 );
+        ProfessionalSkills nogEenSkill = new ProfessionalSkills("ICT Ethics", 2, 2);
         System.out.println(nogEenSkill.toString() + ", afgerond: " +
                 nogEenSkill.isAfgerond());
         nogEenSkill.setGehaald(true);
