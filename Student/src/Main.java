@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * This program lets you create a class and add students to them. Programmed with an Object Oriented implementation.
  *
- * @author  Koen Lippe 500794493
+ * @author Koen Lippe 500794493
  */
 public class Main {
 
@@ -25,10 +25,9 @@ public class Main {
             scanner.nextLine();
 
             //Checking if studentnr = 0 or max students is reached, if so: break out of loop
-            if(studentnr == 0){
+            if (studentnr == 0) {
                 break;
-            }
-            else if(klas.getAantalStudenten() == klas.MAX_STUDENTS){
+            } else if (klas.getAantalStudenten() == klas.MAX_STUDENTS) {
                 break;
             }
 
@@ -80,12 +79,10 @@ public class Main {
             System.out.println("Student toegevoegd!");
 
 
-        }while(studentnr != 0);
-
+        } while (studentnr != 0);
 
 
         System.out.println(klas.toString());
-
 
 
     }

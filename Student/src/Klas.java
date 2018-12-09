@@ -18,7 +18,7 @@ public class Klas {
      *
      * @param naam The class name
      */
-    public Klas(String naam){
+    public Klas(String naam) {
         this.naam = naam;
         this.aantalStudenten = 0;
         this.studenten = new Student[MAX_STUDENTS];
@@ -32,11 +32,10 @@ public class Klas {
      * @param student The student that needs to be added
      * @return true of false indicating correct completion of the method
      */
-    public boolean voegStudentToe(Student student){
+    public boolean voegStudentToe(Student student) {
         if (this.aantalStudenten == MAX_STUDENTS) {
             return false;
-        }
-        else{
+        } else {
             this.studenten[aantalStudenten] = student;
             this.aantalStudenten++;
             return true;
@@ -44,7 +43,7 @@ public class Klas {
     }
 
     /**
-     *  This method returns the amount of students that are present in the Klas object.
+     * This method returns the amount of students that are present in the Klas object.
      *
      * @return integer of the amount of students in the class
      */
@@ -57,7 +56,7 @@ public class Klas {
      *
      * @return Formatted String containing class name and its containing students
      */
-    public String toString(){
+    public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
 
         stringBuilder.append(String.format("%nKlas %s (%d studenten)%n%n", this.naam, this.aantalStudenten));
