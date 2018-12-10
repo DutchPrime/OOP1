@@ -2,7 +2,8 @@ import modules.Punt;
 import modules.Veelhoek;
 
 /**
- *
+ * This program lets you create Punten en Veelhoeken and show the information on the screen.
+ * This program is programmed with Object Oriented programming.
  *
  * @author Koen Lippe 500794493
  */

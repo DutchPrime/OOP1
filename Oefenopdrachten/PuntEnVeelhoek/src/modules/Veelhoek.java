@@ -1,6 +1,8 @@
 package modules;
 
 /**
+ * This class contains information and methods of a Veelhoek object
+ *
  * @author Koen Lippe 500794493
  */
 
@@ -13,6 +15,12 @@ public class Veelhoek {
 
 
     //Constructors
+
+    /**
+     * This contructor creates an instance of a Veelhoek     *
+     *
+     * @param naam The name of the Veelhoek
+     */
     public Veelhoek(String naam) {
         this.naam = naam;
         puntenLijst = new Punt[MINIMUM_AMOUNT_OF_POINTS];
@@ -22,6 +30,12 @@ public class Veelhoek {
 
     }
 
+    /**
+     * This contructor creates an instance of a Veelhoek
+     *
+     * @param naam         The name of the Veelhoek
+     * @param aantalPunten The amount of Punten in the Veelhoek
+     */
     public Veelhoek(String naam, int aantalPunten) {
         this.naam = naam;
         if (aantalPunten < 3) {
@@ -39,7 +53,11 @@ public class Veelhoek {
 
 
     //Methods
-    public void print(){
+
+    /**
+     * This method prints a visual representation containing the information of the Veelhoek object
+     */
+    public void print() {
         System.out.printf("De veelhoek %s, heeft %d punten: ", this.naam, this.puntenLijst.length);
 
         for (int i = 0; i < puntenLijst.length; i++) {
@@ -47,18 +65,29 @@ public class Veelhoek {
         }
     }
 
-    public void setPunt(int index, Punt punt){
-        if (index >= 0 && index < puntenLijst.length){
+    /**
+     * This method sets the Punt inside of the Punten array
+     *
+     * @param index The index the punten array  to set the Punt
+     * @param punt  The punt to replace the existing Punt with
+     */
+    public void setPunt(int index, Punt punt) {
+        if (index >= 0 && index < puntenLijst.length) {
             //valid index
             puntenLijst[index] = punt;
-        }
-        else{
+        } else {
             //invalid index
             System.out.println("Invalid index");
         }
     }
 
-    public void verschuif(int deltaX, int deltaY){
+    /**
+     * This method will shift the full Veelhoek
+     *
+     * @param deltaX The amount to shift the x-axis with
+     * @param deltaY The amount to shit the y-axis with
+     */
+    public void verschuif(int deltaX, int deltaY) {
         for (int i = 0; i < puntenLijst.length; i++) {
             puntenLijst[i].verschuif(deltaX, deltaY);
         }
