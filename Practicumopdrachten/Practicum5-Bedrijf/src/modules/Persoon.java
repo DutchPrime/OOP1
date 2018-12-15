@@ -1,25 +1,24 @@
 package modules;
 
-public class Persoon {
+/**
+ * @auhtor Koen Lippe 500794493
+ */
+
+public abstract class Persoon implements Comparable {
     //Variables
     private String naam;
 
     //Constructor
-    //Weghalen
-    public Persoon(){
-
-    }
-    public Persoon(String naam){
+    public Persoon(String naam) {
         this.naam = naam;
     }
 
     //Methods
-    public double berekenInkomsten(){
-        return 0;
-    }
+    public abstract double berekenInkomsten();
 
-    public int compareTo(Persoon persoon){
-        return 0;
+    public int compareTo(Persoon ander) {
+
+        return this.naam.compareTo(ander.naam);
     }
 
     @Override

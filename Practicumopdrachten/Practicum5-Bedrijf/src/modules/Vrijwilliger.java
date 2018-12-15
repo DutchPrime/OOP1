@@ -1,6 +1,8 @@
 package modules;
 
-public class Vrijwilliger extends Persoon {
+import interfaces.Oproepbaar;
+
+public class Vrijwilliger extends Persoon implements Oproepbaar {
     //Constructors
     public Vrijwilliger(String naam){
         super(naam);
@@ -16,4 +18,8 @@ public class Vrijwilliger extends Persoon {
 
     }
 
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 }
