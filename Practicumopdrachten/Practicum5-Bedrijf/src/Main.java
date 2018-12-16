@@ -1,19 +1,18 @@
 import modules.*;
 
+
 /**
  * @author Koen Lippe 500794493
- *
- *
- * ToDo:
- *       Sort on alphabetical order
- *       Personal message for volunteers
- *       Add javadoc
+ * <p>
+ * This program creates a company and adds workers to it. Furthermore is displays the workers and their monthly salary.
+ * Volunteers and freelancers can also be added.
+ * <p>
+ * This program is made to practice with Object Oriented programing
  */
 
 public class Main {
 
     public static void main(String[] args) {
-//        Collections.sort();
         Bedrijf bedrijf = new Bedrijf("HvA");
 
         Werknemer w = new Werknemer(1200, "Jantine Jansen");
