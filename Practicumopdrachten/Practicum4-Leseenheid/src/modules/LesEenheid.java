@@ -28,7 +28,7 @@ public class LesEenheid {
         this.studieJaar = studieJaar;
     }
 
-    //Methods
+    //Method
 
     /**
      * This methods creates an formatted String in which the LesEenheid's information is displayed
