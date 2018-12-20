@@ -68,10 +68,6 @@ public class Vak extends LesEenheid {
      * @return true of false statement indicating if the Vak is passed
      */
     public boolean isAfgerond() {
-        if (this.cijfer >= ONDERGRENS_VOLDOENDE) {
-            return true;
-        }
-
-        return false;
+        return this.cijfer >= ONDERGRENS_VOLDOENDE;
     }
 }
