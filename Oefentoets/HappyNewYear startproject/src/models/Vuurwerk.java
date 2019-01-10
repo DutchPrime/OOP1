@@ -65,7 +65,7 @@ public class Vuurwerk extends Product {
             stringBuilder.append(String.format("\tInstructie: %s%n", instructie.toString()));
         }
 
-        stringBuilder.append(String.format("\tLegaal: %b%n", isLegaal()));
+        stringBuilder.append(String.format("\tLegaal: %b%n", this.isLegaal()));
 
         return stringBuilder.toString();
 

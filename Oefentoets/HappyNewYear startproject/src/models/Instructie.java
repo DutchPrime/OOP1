@@ -5,7 +5,7 @@ package models;
  *
  * @author Koen Lippe 500794493
  */
-public class Instructie {
+public class Instructie{
 
     //Variables
     private boolean nederlandstalig;

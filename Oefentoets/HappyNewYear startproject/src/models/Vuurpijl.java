@@ -64,8 +64,8 @@ public class Vuurpijl extends Vuurwerk {
     //TODO: Add logic to check if instruction says it is 16+
     @Override
     public boolean isLegaal() {
-        return this.getInstructie().getLeeftijd() >= 16;
 
+        return this.getInstructie() != null && this.getInstructie().getLeeftijd() >= 16;
     }
 
     /**
@@ -82,9 +82,10 @@ public class Vuurpijl extends Vuurwerk {
         stringBuilder.append(String.format("\tHoogte: %.1f%n", hoogte));
         stringBuilder.append(String.format("\tKleuren: %n"));
 
-        for (int i = 0; i < kleurverhouding.length; i++) {
-            stringBuilder.append(String.format("\t\tROOD: %d%%%n", kleurverhouding[i]));
-        }
+        stringBuilder.append(String.format("\t\tROOD: %d%%%n", kleurverhouding[0]));
+        stringBuilder.append(String.format("\t\tGROEN: %d%%%n", kleurverhouding[1]));
+        stringBuilder.append(String.format("\t\tGEEL: %d%%%n", kleurverhouding[2]));
+
 
         return stringBuilder.toString();
     }
