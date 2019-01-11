@@ -65,7 +65,7 @@ public class Vuurpijl extends Vuurwerk {
     @Override
     public boolean isLegaal() {
 
-        return this.getInstructie() != null && this.getInstructie().getLeeftijd() >= 16;
+        return super.isLegaal() && this.getInstructie() != null && this.getInstructie().getLeeftijd() >= 16;
     }
 
     /**
@@ -84,7 +84,7 @@ public class Vuurpijl extends Vuurwerk {
 
         stringBuilder.append(String.format("\t\tROOD: %d%%%n", kleurverhouding[0]));
         stringBuilder.append(String.format("\t\tGROEN: %d%%%n", kleurverhouding[1]));
-        stringBuilder.append(String.format("\t\tGEEL: %d%%%n", kleurverhouding[2]));
+        stringBuilder.append(String.format("\t\tBLAUW: %d%%%n", kleurverhouding[2]));
 
 
         return stringBuilder.toString();
