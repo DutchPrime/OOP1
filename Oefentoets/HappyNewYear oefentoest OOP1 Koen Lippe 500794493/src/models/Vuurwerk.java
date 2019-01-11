@@ -19,7 +19,7 @@ public class Vuurwerk extends Product {
      * @param instructie the instruction that comes with the Vuurwerk
      */
     public Vuurwerk(String naam, double prijs, Instructie instructie) {
-        super(naam, prijs);
+        this(naam, prijs);
         this.instructie = instructie;
     }
 

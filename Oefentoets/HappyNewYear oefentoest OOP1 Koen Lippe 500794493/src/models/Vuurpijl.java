@@ -64,7 +64,6 @@ public class Vuurpijl extends Vuurwerk {
     //TODO: Add logic to check if instruction says it is 16+
     @Override
     public boolean isLegaal() {
-
         return super.isLegaal() && this.getInstructie() != null && this.getInstructie().getLeeftijd() >= 16;
     }
 
