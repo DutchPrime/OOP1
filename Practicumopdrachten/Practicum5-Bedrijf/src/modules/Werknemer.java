@@ -11,7 +11,7 @@ public class Werknemer extends Persoon {
     private final int PERSONEEL_NUMMER_START = 1000;
     private static int laatstePersoneelnummer;
     private double maandSalaris;
-    public int personeelsnummer;
+    private int personeelsnummer;
 
     //Constructor
 

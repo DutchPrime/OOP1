@@ -34,7 +34,7 @@ public abstract class Persoon implements Comparable<Persoon> {
 
     //This method should alphabetically order all persons
     public int compareTo(Persoon ander) {
-        return this.naam.compareTo(ander.toString());
+        return this.naam.compareTo(ander.naam);
     }
 
     /**
