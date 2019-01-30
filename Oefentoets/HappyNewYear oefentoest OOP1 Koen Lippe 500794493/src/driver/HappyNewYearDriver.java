@@ -4,7 +4,7 @@ import models.*;
 
 import java.util.ArrayList;
 
-/**
+/**4
  * This program lets you create Fireworks and print them
  *
  * @author Koen Lippe 500794493
